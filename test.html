@@ -1,0 +1,148 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>無標題文件</title>
+<style type="text/css">
+
+body {
+	font: 100%/1.4 Verdana, Arial, Helvetica, sans-serif;
+	background-color: #666;
+	margin: 15px;
+	padding: 0px;
+	color: #000;
+	background-image: url(b.jpg);
+	background-repeat: no-repeat;
+	background-position: center;
+	background-size: 100%;
+}
+
+/* ~~ 元素/標籤選取器 ~~ */
+ul, ol, dl { /* 由於瀏覽器之間的差異，最佳作法是在清單中使用零寬度的欄位間隔及邊界。為了保持一致，您可以在這裡指定所要的量，或在清單包含的清單項目 (LI、DT、DD) 上指定所要的量。請記住，除非您寫入較為特定的選取器，否則在此執行的作業將重疊顯示到 .nav 清單。 */
+	padding: 0;
+	margin: 0;
+}
+h1, h2, h3, h4, h5, h6, p {
+	margin-top: 0;	 /* 移除上方邊界可以解決邊界可能從其包含的 Div 逸出的問題。剩餘的下方邊界可以保持 Div 不與接在後面的元素接觸。 */
+	padding-right: 15px;
+	padding-left: 15px; /* 將欄位間隔加入至 Div 內元素的兩側 (而不是 Div 本身)，即可不需執行任何方塊模型的計算作業。具有側邊欄位間隔的巢狀 Div 也可當做替代方法。 */
+}
+a img { /* 這個選取器會移除某些瀏覽器在影像由連結所圍繞時，影像周圍所顯示的預設藍色邊框 */
+	border: none;
+}
+/* ~~ 網站連結的樣式設定必須保持此順序，包括建立滑過 (Hover) 效果的選取器群組在內。~~ */
+a:link {
+	color: #42413C;
+	text-decoration: underline; /* 除非您要設定非常獨特的連結樣式，否則最好提供底線，以便快速看出 */
+}
+a:visited {
+	color: #6E6C64;
+	text-decoration: underline;
+}
+a:hover, a:active, a:focus { /* 這個選取器群組可以讓使用鍵盤導覽的使用者，也和使用滑鼠的使用者一樣擁有相同的滑過體驗。 */
+	text-decoration: none;
+}
+
+/* ~~ 這個固定寬度的容器環繞著其他 Div ~~ */
+.container {
+	width: 960px;
+	background-color: #CCC;
+	margin: 0 auto; /* 兩側的自動值與寬度結合後，版面便會置中對齊 */
+	box-shadow: 0px 1px 3px 3px #000000;
+}
+
+/* ~~ 頁首沒有指定的寬度，而會橫跨版面的整個寬度。頁首包含影像預留位置，必須由您自己的連結商標加以取代 ~~ */
+.header {
+	background-color: #ADB96E;
+	height: 300px;
+}
+
+/* ~~ 這是版面資訊。~~ 
+
+1) 欄位間隔只會置於 Div 的頂端或底部。此 Div 內的元素在兩側會有欄位間隔，可讓您不需進行「方塊模型計算」。請記住，如果對 Div 本身加入任何側邊的欄位間隔或邊框，在計算「總」寬度時，就會將這些加入您定義的寬度。您也可以選擇移除 Div 中元素的欄位間隔，然後在其中放置沒有寬度的第二個 Div，並依設計所需放置欄位間隔。
+
+*/
+
+.content {
+	margin:0px auto;
+}
+
+/* ~~ 頁尾 ~~ */
+.footer {
+	padding: 10px 0;
+	background-color: #4d4d4d;
+}
+
+/* ~~ 其他 float/clear 類別 ~~ */
+.fltrt {  /* 這個類別可用來讓元素在頁面中浮動，浮動的元素必須位於頁面上相鄰的元素之前。 */
+	float: right;
+	margin-left: 8px;
+}
+.fltlft { /* 這個類別可用來讓元素在頁面左方浮動，浮動的元素必須位於頁面上相鄰的元素之前。 */
+	float: left;
+	margin-right: 8px;
+}
+.clearfloat { /* 這個類別可放置在 <br /> 或空白的 Div 上，當做接在 #container 內最後一個浮動 Div 後方的最後一個元素 (如果從 #container 移除或取出 #footer) */
+	clear:both;
+	height:0;
+	font-size: 1px;
+	line-height: 0px;
+}
+-->
+.mydiv{
+	float: left;
+	height: 350px;
+	width: 290px;
+	margin-right: 15px;
+	margin-bottom: 10px;
+	margin-left: 11px;
+	border: 1px solid #000;
+	box-shadow:0px 1px 3px 3px #666666;
+}
+.myPic1{
+	margin: 15px;
+	float: right;
+	box-shadow: 0px 1px 5px 5px #999999;
+	border: 2px solid #FFF;
+}
+.myPic2{
+	margin: 5px;
+	box-shadow: 0px 1px 5px 5px #999999;
+	border: 2px solid #FFF;
+	height: 166px;
+	width: 250px;
+}
+</style></head>
+
+<body>
+
+<div class="container">
+  <div class="header"><a href="#"><img src="a1.jpg" width="960" height="300" style="box-shadow:0px 1px 2px 2px #333333"></a> 
+    <!-- end .header --></div>
+  <div class="content">
+    <h1>Heavy Metal</h1>
+    <p><strong>最早起源於西方1960年代後期的Hard  Rock，1970年代初的新一批樂團（齊柏林飛船、黑色安息日、深紫色樂團）將演奏技巧加以改良，這些樂團成了重金屬樂風的雛形。</strong></p>
+    <p><strong>70年代的Punk，代表樂團「Sex Pistols」風波過後，在英國的地下搖滾圈子裡突然崛起了一種新式的金屬潮流：<img src="nnn1332.jpg" width="403" height="273" class="myPic1">英國重金新浪潮，其中的主力樂團有Iron Maiden，Motorhead。同時，該金屬風波也引起了美國樂團的熱烈反應，Metallica，Megadeth，造就重金屬的興起。</strong></p>
+    <p><strong>自1980年代中期，重金屬樂出現了不同種類的風格分之，比如Power Metal，Speed Metal，Thrash Metal，Death Metal，Black Metal，Gothic  Metal等等，因此重金屬音樂不僅僅是所有金屬音樂風格的統稱，其主要含義是指70年代到80年代中期的傳統重金屬流派。</strong></p>
+    <p><strong>至1990年代，重金屬樂又再一次出現轉變，當時一些新派的重金屬樂隊把重金屬樂加入了不同的元素和演繹方式，如加入DJ混音、MIDI、RAP等，形成了新的重金屬樂風格Nu-Metal。主要的樂團有Limp Bizkit、P.O.D.、Korn、Slipknot、system of a Down等。Heavy Metal通常具備狂吼咆哮或高亢激昂的嗓音、電吉他大量失真的音色、再以密集快速的鼓點和低沉有力的貝司填滿整個聽覺的背景空間，而構成一種含有高爆發力，快速度，重量感及破壞性等元素的改良式搖滾樂。</strong></p>
+	<div class="mydiv">
+    <p><img src="m11.jpeg" class="myPic2">Thrash Metal</p>
+    <p>速度快，配合電吉他粗礦的音色發出激烈的和弦，具破壞力及壓迫感的狂踩<span lang="EN-US">DOUBLE BASS DRUM，主音粗暴狂吼式的唱腔配合電吉他快速的節奏。</span>代表樂團:Lamb Of God</p>
+	</div>
+    <div class="mydiv">
+      <p><img src="l11.jpg" class="myPic2">Metal core</p>
+      <p>金屬音樂和龐克音樂的融合體，該樂風的歌曲中可以聽到Metal及HARD ROCK的結合，兩種元素的結合創造出聽起來不同面向且豐富的歌曲。代表樂團:Bullet For My Valentine</p>
+    </div>
+    <div class="mydiv">
+      <p><img src="g11.jpg" class="myPic2">Death Metal</p>
+      <p>樂風以Thrash及Hard ROCK為其背景演化而成。電吉他快速的反覆幾近無旋律的和弦，配上<span lang="EN-US">主唱咬字不清又帶有穿透力的低吟狂吼而組成。</span><span lang="EN-US">代表樂團:</span><span lang="EN-US">Arch Enemy</span> </p>
+    </div>
+    <div style="clear:both">
+    </div>
+    </div>
+  <div class="footer">
+    <p><strong>CopyRight&copy;凌有祥</strong></p>
+  <!-- end .footer --></div>
+  <!-- end .container --></div>
+</body>
+</html>
